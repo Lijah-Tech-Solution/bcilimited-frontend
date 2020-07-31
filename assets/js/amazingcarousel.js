@@ -269,13 +269,6 @@
             var firstScriptTag = document.getElementsByTagName("script")[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
         }
-        if (inst.options.inityoutube) {
-            var tag = document.createElement("script");
-            tag.src = "https://www.youtube.com/iframe_api";
-            var firstScriptTag =
-                document.getElementsByTagName("script")[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
-        }
         if (inst.options.initsocial) $("head").append('<link rel="stylesheet" href="' + inst.options.jsfolder + 'icons/css/fontello.css" type="text/css" />');
         inst.showing = false;
         inst.navvisible = false;
