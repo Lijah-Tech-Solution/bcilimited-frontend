@@ -1,0 +1,45 @@
+.services {
+	position: relative;
+	height: auto;
+	margin-bottom: 1em;
+}
+
+.lay p {
+	/* background-color: darkmagenta; */
+}
+
+
+.right h2,
+.left h2 {
+	margin-top: .8em;
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-left: .8em;
+}
+
+.right p,
+.left p {
+	color: darkslategrey;
+	padding: 3px 20px 3px 20px;
+	text-align: justify;
+}
+
+/* .left p {
+	padding: 3px 20px 3px 20px;
+	text-align: justify;
+} */
+/* .left h2 {
+	position: relative;
+	left: .5em;
+} */
+
+.right:hover span.icon {
+	color: #fff;
+	padding: 1.2em;
+	background: #3a3388;
+	/* -webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2); */
+}
