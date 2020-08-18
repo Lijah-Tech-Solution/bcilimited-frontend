@@ -5,11 +5,41 @@
 }
 
 .lay p {
-	/* background-color: darkmagenta; */
+	color: rgb(71, 70, 71);
+}
+
+.lay .top {
+	width: 3.5em;
+	position: relative;
+	/* left: 50%; */
+}
+
+.lay:hover {
+	border-radius: .3em;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	box-sizing: border-box;
+	-webkit-transition: .4s ease-in-out;
+	-moz-transition: .4s ease-in-out;
+	-o-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
 }
 
 
-.right h2,
+
+.lay h2 {
+	margin-top: .8em;
+	margin-bottom: .6em;
+	color: rgb(24, 27, 27);
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-left: .8em;
+}
+
+/* .right h2,
 .left h2 {
 	margin-top: .8em;
 	font-size: 1.5em;
@@ -20,9 +50,8 @@
 .right p,
 .left p {
 	color: darkslategrey;
-	padding: 3px 20px 3px 20px;
-	text-align: justify;
-}
+	padding: 3px 20px 3px 20px; */
+
 
 /* .left p {
 	padding: 3px 20px 3px 20px;

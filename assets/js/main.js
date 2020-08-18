@@ -1,10 +1,10 @@
-(function() {
-    
+(function () {
+
     "use strict";
-    
+
     //===== Prealoder
 
-    window.onload = function() {
+    window.onload = function () {
         window.setTimeout(fadeout, 500);
     }
 
@@ -13,7 +13,7 @@
         document.querySelector('.preloader').style.display = 'none';
     }
 
-    
+    new WOW().init();
     /*=====================================
     Sticky
     ======================================= */
@@ -46,7 +46,7 @@
 
     // for menu scroll 
     var pageLink = document.querySelectorAll('.page-scroll');
-    
+
     pageLink.forEach(elem => {
         elem.addEventListener('click', e => {
             e.preventDefault();
@@ -58,7 +58,7 @@
     });
 
 
-      
+
 
 
 
@@ -69,14 +69,14 @@
         var sections = document.querySelectorAll('.page-scroll');
         var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
         var sticky = sections.offsetTop;
-        
+
         for (var i = 0; i < sections.length; i++) {
             var currLink = sections[i];
             var val = currLink.getAttribute('href');
             var refElement = document.querySelector(val);
             var scrollTopMinus = scrollPos + 73;
             if (window.pageYOffset >= sticky) {
-            // if (refElement.offsetTop <= scrollTopMinus && (refElement.offsetTop + refElement.offsetHeight > scrollTopMinus)) {
+                // if (refElement.offsetTop <= scrollTopMinus && (refElement.offsetTop + refElement.offsetHeight > scrollTopMinus)) {
                 document.querySelector('.page-scroll').classList.remove('active');
                 currLink.classList.add('active');
             } else {
@@ -89,7 +89,7 @@
 
 
     //===== close navbar-collapse when a  clicked
-    let navbarToggler = document.querySelector(".navbar-toggler");    
+    let navbarToggler = document.querySelector(".navbar-toggler");
     var navbarCollapse = document.querySelector(".navbar-collapse");
 
     document.querySelectorAll(".page-scroll").forEach(e =>
@@ -101,7 +101,7 @@
 
 
     //===== glide slider for testimonial
-    
+
     new Glide('.glide', {
         type: 'slider',
         perView: 1,
@@ -114,5 +114,5 @@
         mobile: false
     });
     wow.init();
-    
+
 })();

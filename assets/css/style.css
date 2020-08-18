@@ -1082,19 +1082,20 @@ ul.resource {
 
 /* .single_features h,p{
   background-color: #0303030a; */
-  /* padding: 5px;
+/* padding: 5px;
   flex-wrap: wrap;
   border-radius: 0.3rem;
   height: 15em; */
 /* } */
-.sub_feature-0{
+.sub_feature-0 {
   background-color: #0303030a;
   padding: 5px;
   flex-wrap: wrap;
   border-radius: 0.3rem;
   height: 15em;
 }
-.sub_feature-1{
+
+.sub_feature-1 {
   background-color: #0303030a;
   padding: 5px;
   flex-wrap: wrap;
@@ -1102,12 +1103,13 @@ ul.resource {
   height: 11em;
 }
 
-.sub_feature-0:hover, .sub_feature-1:hover{
+.sub_feature-0:hover,
+.sub_feature-1:hover {
   box-shadow: 1px 2px 12px 1px rgb(106, 104, 102);
 
 }
 
-.features_area .main-btn{
+.features_area .main-btn {
   margin-top: 1.5em;
 }
 
@@ -1460,8 +1462,10 @@ p.form-message.error.form-message.error {
 .footer_area {
   background-color: #1c1a3d;
   position: relative;
-  z-index: 9; }
-  /* .footer_area::before {
+  z-index: 9;
+}
+
+/* .footer_area::before {
     width: 33%;
     height: 100%;
     position: absolute;
@@ -1491,105 +1495,144 @@ p.form-message.error.form-message.error {
 .footer_widget .footer_title {
   font-size: 20px;
   font-weight: 600;
-  color: #fff; }
+  color: #fff;
+}
 
 .footer_content {
-  margin-top: 10px; 
+  margin-top: 10px;
 }
-  .footer_content p {
-    color: #fff; }
 
-    .link span{
-          color: #fff;
-          line-height: 1.7em;
-    }
+.footer_content p {
+  color: #fff;
+}
+
+.link span {
+  color: #fff;
+  line-height: 1.7em;
+}
+
 .footer_link {
   width: 50%;
-  padding-left: 50px; }
-  @media (max-width: 767px) {
-    .footer_link {
-      padding-left: 0; } }
-  .footer_link .link {
-    padding-top: 10px; }
-    .footer_link .link li a {
-      font-size: 16px;
-      color: #fff;
-      margin-top: 15px;
-      -webkit-transition: all 0.3s ease-out 0s;
-      -moz-transition: all 0.3s ease-out 0s;
-      -ms-transition: all 0.3s ease-out 0s;
-      -o-transition: all 0.3s ease-out 0s;
-      transition: all 0.3s ease-out 0s; }
-      .footer_link .link li a:hover {
-        color: #625ca3; }
+  padding-left: 50px;
+}
+
+@media (max-width: 767px) {
+  .footer_link {
+    padding-left: 0;
+  }
+}
+
+.footer_link .link {
+  padding-top: 10px;
+}
+
+.footer_link .link li a {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 15px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.footer_link .link li a:hover {
+  color: #625ca3;
+}
+
 .subscribe_form {
   margin-top: 35px;
-  position: relative; }
-  .subscribe_form input {
-    width: 100%;
-    padding: 0 25px;
-    border: 0;
-    background-color: #fff;
-    font-size: 15px;
-    color: #38424D;
-    height: 60px;
-    border-radius: 50px; }
+  position: relative;
+}
+
+.subscribe_form input {
+  width: 100%;
+  padding: 0 25px;
+  border: 0;
+  background-color: #fff;
+  font-size: 15px;
+  color: #38424D;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.subscribe_form .main-btn {
+  background-color: #3a3388;
+  border-radius: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+@media (max-width: 767px) {
   .subscribe_form .main-btn {
-    background-color: #3a3388;
-    border-radius: 50px;
-    height: 50px;
-    line-height: 50px;
+    position: relative;
+    margin-top: 10px;
+    right: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .subscribe_form .main-btn {
     position: absolute;
     top: 5px;
-    right: 5px; }
-    @media (max-width: 767px) {
-      .subscribe_form .main-btn {
-        position: relative;
-        margin-top: 10px;
-        right: 0;
-        width: 100%; } }
-    @media (max-width: 767px) {
-      .subscribe_form .main-btn {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        margin-top: 0;
-        width: auto; } }
-    .subscribe_form .main-btn:hover {
-      background-color: #544ca3; }
+    right: 5px;
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+.subscribe_form .main-btn:hover {
+  background-color: #544ca3;
+}
 
 .footer_copyright {
   padding-bottom: 20px;
   padding-top: 5px;
-  border-top: 2px solid rgba(255, 255, 255, 0.09); }
+  border-top: 2px solid rgba(255, 255, 255, 0.09);
+}
 
 .footer_social {
-  padding-top: 15px; }
-  .footer_social .social li {
-    display: inline-block;
-    margin-right: 10px; }
-    .footer_social .social li a {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      -webkit-transition: all 0.3s ease-out 0s;
-      -moz-transition: all 0.3s ease-out 0s;
-      -ms-transition: all 0.3s ease-out 0s;
-      -o-transition: all 0.3s ease-out 0s;
-      transition: all 0.3s ease-out 0s; }
-      .footer_social .social li a:hover {
-        color: #F94F4F;
-        background-color: #fff; }
+  padding-top: 15px;
+}
+
+.footer_social .social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer_social .social li a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.footer_social .social li a:hover {
+  color: #F94F4F;
+  background-color: #fff;
+}
 
 .footer_copyright_content {
-  padding-top: 15px; }
-  .footer_copyright_content p {
-    font-size: 16px;
-    color: #fff; }
+  padding-top: 15px;
+}
+
+.footer_copyright_content p {
+  font-size: 16px;
+  color: #fff;
+}
 
 /*===== BACK TO TOP =====*/
 .back-to-top {
@@ -1610,7 +1653,10 @@ p.form-message.error.form-message.error {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  display: none; }
-  .back-to-top:hover {
-    color: #fff;
-    background-color: #F94F4F; }
+  display: none;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background-color: #F94F4F;
+}
