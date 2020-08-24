@@ -180,7 +180,7 @@ p {
 .section_title p {
   margin-top: 15px;
   font-size: 18px;
-  color: #9e9db3;
+  color: #4e4e55;
 }
 
 .section_title.section_title_2 .title,
@@ -1105,7 +1105,7 @@ ul.resource {
 
 .sub_feature-0:hover,
 .sub_feature-1:hover {
-  box-shadow: 1px 2px 12px 1px rgb(106, 104, 102);
+  box-shadow: 1px 2px 12px 1px rgb(115, 65, 190);
 
 }
 
