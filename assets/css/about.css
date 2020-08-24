@@ -167,7 +167,7 @@
  .section_title p {
    margin-top: 15px;
    font-size: 18px;
-   color: #9e9db3;
+   color: #3e3e3f;
  }
 
  .section_title.section_title_2 .title,
@@ -947,7 +947,8 @@
       05.PORTFOLIO css 
 ===========================*/
  .single_portfolio {
-   background-color: rgba(230, 231, 234, 0.77);
+   /* background-color: rgba(230, 231, 234, 0.77); */
+   box-shadow: 1px 2px 12px 1px rgb(139, 107, 187);
    /* margin: 1em; */
    height: 18em;
    position: relative;
@@ -1176,6 +1177,10 @@
    height: 100%;
    background-color: rgba(43, 42, 61, 0.9);
    z-index: -1;
+ }
+
+ .member {
+   width: 45%;
  }
 
  .footer_area {
