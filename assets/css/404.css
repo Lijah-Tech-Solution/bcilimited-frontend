@@ -1,0 +1,68 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #f6f6f6;
+    color: #5A5872;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hero {
+    width: 50em;
+}
+
+.oops-h {
+    font-size: 4em;
+}
+
+.oops-p {
+    font-size: 1em;
+}
+
+.oops-btn svg {
+    /* display: none; */
+    width: 1.5em;
+}
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+    .oops-h {
+        font-size: 3em;
+    }
+
+    .oops-p {
+        font-size: .8em;
+    }
+
+    .oops-btn svg {
+        display: initial;
+        width: 2em;
+    }
+}
+
+@media only screen and (min-width: 90px) and (max-width: 500px) {
+    .oops-h {
+        font-size: 2em;
+    }
+
+    .oops-btn span {
+        display: none;
+    }
+
+}

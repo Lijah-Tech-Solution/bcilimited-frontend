@@ -1,27 +1,16 @@
-.services {
-	position: relative;
-	height: auto;
-	margin-bottom: 3em;
+.card-icon {
+	width: 3em;
+	color: red;
+
+	/* padding: .1px, 20px, .0px, 20px; */
+	/* position: relative; */
 }
 
-.lay p {
-	color: rgb(71, 70, 71);
-}
-
-.lay .top {
-	width: 3.5em;
-	position: relative;
-	/* left: 50%; */
-}
-
-.lay:hover {
+.card:hover {
 	border-radius: .3em;
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	transform: scale(1.1);
-	-o-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	box-sizing: border-box;
+	/* transform: rotateY(15deg); */
+	background-color: rgb(250, 248, 248);
+	transition: transform 1s;
 	-webkit-transition: .4s ease-in-out;
 	-moz-transition: .4s ease-in-out;
 	-o-transition: .4s ease-in-out;
@@ -29,8 +18,13 @@
 }
 
 
+.card:hover .card-text {
+	color: #000;
+}
 
-.lay h2 {
+
+
+.card-title {
 	margin-top: .8em;
 	margin-bottom: .6em;
 	color: rgb(24, 27, 27);
