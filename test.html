@@ -5,303 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
+        body {
+  -webkit-box-align: center;
+          align-items: center;
+  background: #E3E3E3;
+  display: -webkit-box;
+  display: flex;
   height: 100vh;
-}
-
-.wrapper {
-  background: linear-gradient(60deg, #420285, #08BDBD);
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: flex;
   -webkit-box-pack: center;
           justify-content: center;
 }
 
-.carousel {
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
   position: relative;
-  width: 100%;
-  max-width: 500px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  width: 960px;
 }
-
-.carousel__item {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+.slider::before, .slider::after {
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
   position: absolute;
-  width: 100%;
-  padding: 0 12px;
-  opacity: 0;
-  -webkit-filter: drop-shadow(0 2px 2px #555);
-          filter: drop-shadow(0 2px 2px #555);
-  will-change: transform, opacity;
-  -webkit-animation: carousel-animate-vertical 27s linear infinite;
-          animation: carousel-animate-vertical 27s linear infinite;
+  width: 200px;
+  z-index: 2;
 }
-
-.carousel__item:nth-child(1) {
-  -webkit-animation-delay: calc(3s * -1);
-          animation-delay: calc(3s * -1);
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
 }
-
-.carousel__item:nth-child(2) {
-  -webkit-animation-delay: calc(3s * 0);
-          animation-delay: calc(3s * 0);
+.slider::before {
+  left: 0;
+  top: 0;
 }
-
-.carousel__item:nth-child(3) {
-  -webkit-animation-delay: calc(3s * 1);
-          animation-delay: calc(3s * 1);
-}
-
-.carousel__item:nth-child(4) {
-  -webkit-animation-delay: calc(3s * 2);
-          animation-delay: calc(3s * 2);
-}
-
-.carousel__item:nth-child(5) {
-  -webkit-animation-delay: calc(3s * 3);
-          animation-delay: calc(3s * 3);
-}
-
-.carousel__item:nth-child(6) {
-  -webkit-animation-delay: calc(3s * 4);
-          animation-delay: calc(3s * 4);
-}
-
-.carousel__item:nth-child(7) {
-  -webkit-animation-delay: calc(3s * 5);
-          animation-delay: calc(3s * 5);
-}
-
-.carousel__item:nth-child(8) {
-  -webkit-animation-delay: calc(3s * 6);
-          animation-delay: calc(3s * 6);
-}
-
-.carousel__item:last-child {
-  -webkit-animation-delay: calc(-3s * 2);
-          animation-delay: calc(-3s * 2);
-}
-
-.carousel__item-head {
-  border-radius: 50%;
-  background-color: #d7f7fc;
-  width: 90px;
-  height: 90px;
-  padding: 14px;
-  position: relative;
-  margin-right: -45px;
-  flex-shrink: 0;
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
   display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  font-size: 50px;
+  width: calc(250px * 14);
 }
-
-.carousel__item-body {
-  width: 100%;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 16px 20px 16px 70px;
-}
-
-.title {
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-@-webkit-keyframes carousel-animate-vertical {
-  0% {
-    -webkit-transform: translateY(100%) scale(0.5);
-            transform: translateY(100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
-  3%,
-  11.1111111111% {
-    -webkit-transform: translateY(100%) scale(0.7);
-            transform: translateY(100%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
-  14.1111111111%,
-  22.2222222222% {
-    -webkit-transform: translateY(0) scale(1);
-            transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
-  25.2222222222%,
-  33.3333333333% {
-    -webkit-transform: translateY(-100%) scale(0.7);
-            transform: translateY(-100%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
-  36.3333333333% {
-    -webkit-transform: translateY(-100%) scale(0.5);
-            transform: translateY(-100%) scale(0.5);
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateY(-100%) scale(0.5);
-            transform: translateY(-100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes carousel-animate-vertical {
-  0% {
-    -webkit-transform: translateY(100%) scale(0.5);
-            transform: translateY(100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
-  3%,
-  11.1111111111% {
-    -webkit-transform: translateY(100%) scale(0.7);
-            transform: translateY(100%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
-  14.1111111111%,
-  22.2222222222% {
-    -webkit-transform: translateY(0) scale(1);
-            transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
-  25.2222222222%,
-  33.3333333333% {
-    -webkit-transform: translateY(-100%) scale(0.7);
-            transform: translateY(-100%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
-  36.3333333333% {
-    -webkit-transform: translateY(-100%) scale(0.5);
-            transform: translateY(-100%) scale(0.5);
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateY(-100%) scale(0.5);
-            transform: translateY(-100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
+.slider .slide {
+  height: 100px;
+  width: 250px;
 }
 
     </style>
 </head>
 <body>
-    <div class='wrapper'>
-        <div class='carousel'>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐳
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="assets/images/contact_bg.jpg" height="100" width="250" alt="" />
             </div>
-            <div class='carousel__item-body'>
-              <p class='title'>spouting whale</p>
-              <p>Unicode: U+1F433</p>
+            <div class="slide">
+                <img src="assets/images/clients/9mobile-logo.jpg" height="100" width="250" alt="" />
             </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐋
+            <div class="slide">
+                <img src="assets/images/clients/ab-inbev.png" height="100" width="250" alt="" />
             </div>
-            <div class='carousel__item-body'>
-              <p class='title'>whale</p>
-              <p>Unicode: U+1F40B</p>
+            <div class="slide">
+                <img src="assets/images/clients/accion.jpg" height="100" width="250" alt="" />
             </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐬
+            <div class="slide">
+                <img src="assets/images/clients/air-france-klm-logo.png" height="100" width="250" alt="" />
             </div>
-            <div class='carousel__item-body'>
-              <p class='title'>dolphin</p>
-              <p>Unicode: U+1F42C</p>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
             </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐟
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
             </div>
-            <div class='carousel__item-body'>
-              <p class='title'>fish</p>
-              <p>Unicode: U+1F41F</p>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
             </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐠
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
             </div>
-            <div class='carousel__item-body'>
-              <p class='title'>tropical fish</p>
-              <p>Unicode: U+1F420</p>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
             </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐡
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
             </div>
-            <div class='carousel__item-body'>
-              <p class='title'>blowfish</p>
-              <p>Unicode: U+1F421</p>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
             </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🦈
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
             </div>
-            <div class='carousel__item-body'>
-              <p class='title'>shark</p>
-              <p>Unicode: U+1F988</p>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
             </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐙
-            </div>
-            <div class='carousel__item-body'>
-              <p class='title'>octopus</p>
-              <p>Unicode: U+1F419</p>
-            </div>
-          </div>
-          <div class='carousel__item'>
-            <div class='carousel__item-head'>
-              🐚
-            </div>
-            <div class='carousel__item-body'>
-              <p class='title'>spiral shell</p>
-              <p>Unicode: U+1F41A</p>
-            </div>
-          </div>
         </div>
-      </div>
-      
+    </div>
 </body>
 </html>
