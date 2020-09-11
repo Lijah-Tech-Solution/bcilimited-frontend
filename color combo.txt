@@ -1,1 +1,5 @@
-deep blue # 1d1858 light blue # 3a3388 lighter blue #716ab9
+deep blue # 1d1858 light blue #3a3388 lighter blue #716ab9
+
+<rect x="13.5496" y="31.4351" width="20.5954" height="4.87786" fill="#1d1858"/>
+<rect x="43.3588" y="31.4351" width="20.5954" height="4.87786" fill="#1d1858"/>
+<rect x="34.145" width="14.6336" height="4.33588" fill="#1d1858"/>

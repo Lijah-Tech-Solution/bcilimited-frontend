@@ -27,7 +27,7 @@
             logo.setAttribute("src", "assets/images/bci.svg")
         } else {
             header_navbar.classList.remove("sticky");
-            logo.setAttribute("src", "assets/images/bci.svg")
+            logo.setAttribute("src", "assets/images/bci-white.webp")
         }
 
 
